@@ -35,5 +35,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: userservice-1746649268795
-          publish-profile: ${{ secrets.azureWebAppPublishProfile }}
+          publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
           package: '*.jar'
