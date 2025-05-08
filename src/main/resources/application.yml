@@ -3,7 +3,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: ${MONGODB_URI}
+      uri: mongodb://dummy01:==@dummy01.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false
       database: dummy01
   mail:
     host: smtp.gmail.com
