@@ -55,12 +55,12 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5CB66BA231914A6D9C96A3EAA01B1E11 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_68F6E5DAFF9E4903874852B2BB9AFEC0 }}
 
-      - name: Set MONGODB_URI in Azure App Settings
-        run: |
-          az webapp config appsettings set \
-            --name helpdeskilluminadev \
-            --resource-group YOUR_RESOURCE_GROUP_NAME \
-            --settings MONGODB_URI='${{ secrets.MONGODB_URI }}'
+#      - name: Set MONGODB_URI in Azure App Settings
+#        run: |
+#          az webapp config appsettings set \
+#            --name helpdeskilluminadev \
+#            --resource-group YOUR_RESOURCE_GROUP_NAME \
+#            --settings MONGODB_URI='${{ secrets.MONGODB_URI }}'
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
