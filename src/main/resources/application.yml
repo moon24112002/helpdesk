@@ -1,9 +1,9 @@
 server:
-  .port: 9091
+  .port: ${PORT:8080}
 spring:
   data:
     mongodb:
-      uri: mongodb://dummy01:9kugLJu0N9hoGitjJfePy9NzPU76YeQivzGQTvWEqezDb2lu4uXTpB302q7YRAx5J6eM44eTm113ACDb4tjjsA==@dummy01.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@dummy01@
+      uri: ${MONGODB_URI}
       database: dummy01
   mail:
     host: smtp.gmail.com

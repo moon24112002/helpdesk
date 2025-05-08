@@ -56,6 +56,13 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5CB66BA231914A6D9C96A3EAA01B1E11 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_68F6E5DAFF9E4903874852B2BB9AFEC0 }}
 
+      - name: Set MONGODB_URI as app setting in Azure Web App
+        run: |
+          az webapp config appsettings set \
+            --name illuminahelpdesk \
+            --resource-group <your-resource-group-name> \
+            --settings MONGODB_URI='${{ secrets.MONGODB_URI }}' 
+          
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
